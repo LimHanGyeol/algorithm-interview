@@ -40,7 +40,6 @@ class Solution {
                 square = square + 1;
             }
         }
-
         return square;
     }
 

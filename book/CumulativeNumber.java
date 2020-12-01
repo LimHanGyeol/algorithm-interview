@@ -31,7 +31,6 @@ class Solution {
             sum = getStudentNumber(freq, i, sum);
             cume[i] = sum;
         }
-
         return cume;
     }
 
@@ -63,6 +62,5 @@ class Solution {
 
         return cume[n - 1];
     }
-
 
 }

@@ -3,7 +3,7 @@
 class Solution {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 72, 60, 83, 47, 89, 95};
+        int[] array = new int[] {72, 60, 83, 47, 89, 95};
         System.out.println(findMaxNumber(array));
     }
 

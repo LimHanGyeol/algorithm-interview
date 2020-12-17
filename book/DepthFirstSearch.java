@@ -13,8 +13,9 @@ class Solution {
 
     public static void main(String[] args) {
         Node[] nodes = new Node[6];
+        int size = nodes.length;
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < size; i++) {
             nodes[i] = new Node(i + 1);
         }
 
@@ -22,21 +23,26 @@ class Solution {
         nodes[0].addAdjacentNodes(nodes[1]);
         nodes[0].addAdjacentNodes(nodes[2]);
         nodes[0].addAdjacentNodes(nodes[4]);
+
         nodes[1].addAdjacentNodes(nodes[0]);
         nodes[1].addAdjacentNodes(nodes[2]);
+
         nodes[2].addAdjacentNodes(nodes[0]);
         nodes[2].addAdjacentNodes(nodes[1]);
         nodes[2].addAdjacentNodes(nodes[3]);
         nodes[2].addAdjacentNodes(nodes[4]);
+
         nodes[3].addAdjacentNodes(nodes[2]);
         nodes[3].addAdjacentNodes(nodes[5]);
+
         nodes[4].addAdjacentNodes(nodes[0]);
         nodes[4].addAdjacentNodes(nodes[2]);
+
         nodes[5].addAdjacentNodes(nodes[2]);
         nodes[5].addAdjacentNodes(nodes[3]);
 
         System.out.print("result : ");
-        depthFirstSearch(nodes[0]);
+        depthFirstSearch(nodes[0]); // 1 2 3 4 6 5
     }
 
     /**
@@ -61,4 +67,3 @@ class Solution {
     }
 
 }
-

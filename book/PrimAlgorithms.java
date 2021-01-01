@@ -3,7 +3,7 @@
  * 탐욕 기법 - Prim 알고리즘 (Greedy - Prim Algorithms)
  * 최소 비용 신장 트리 (MST, Minimum Spanning Tree)
  */
- class Solution {
+class Solution {
 
     private static final int X = 9999;
 

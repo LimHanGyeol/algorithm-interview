@@ -26,9 +26,9 @@ class Solution {
             while (j >= 0 && (array[j] > insertContainer)) {
                 array[j + 1] = array[j];
                 j = j - 1;
-
-                array[j + 1] = insertContainer;
             }
+            
+            array[j + 1] = insertContainer;
         }
         return array;
     }

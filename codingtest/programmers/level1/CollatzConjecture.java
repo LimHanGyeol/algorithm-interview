@@ -1,4 +1,8 @@
-// 콜라츠 추측
+/**
+ * 프로그래머스
+ * Level1
+ * 콜라츠 추측
+ */
 class Solution {
 
     public int solution(long number) {

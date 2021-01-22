@@ -1,5 +1,5 @@
-# python-algorithm-interview
-알고리즘, 자료구조 학습 프로젝트
+# algorithm-interview
+코딩테스트, 알고리즘 학습 저장소
 
 * Programmers
 * Codility

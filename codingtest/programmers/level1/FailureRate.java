@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * 프로그래머스
  * Level1
- * 하샤드 수
+ * 실패율
  */
 class Solution {
 

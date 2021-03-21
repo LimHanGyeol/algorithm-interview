@@ -6,46 +6,48 @@ import java.util.*;
  */
 class Main {
 
-    private static int[][] graph;
-    private static boolean[] visited;
-    private static int node;
-    private static edge;
-    private static int count = 0;
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int node = toInt(bufferedReader.readLine());
         int edge = toInt(bufferedReader.readLine());
-        int count = 0;
 
-        int[][] graph = new int[node + 1][node + 1];
+        int[][] matrix = new int[node + 1][node + 1];
+        int length = matrix.length;
         boolean[] visited = new boolean[node + 1];
 
-        for (int i = 1; i <= edge; i++) {
-            int x = toInt(bufferedReader.readLine());
-            int y = toInt(bufferedReader.readLine());
+        for (int i = 0; i < edge; i++) {
+            String[] input = bufferedReader.readLine().split(" ");
+            int x = toInt(input[0]);
+            int y = toInt(input[1]);
 
-            graph[x][y] = graph[y][x] = 1;
+            matrix[x][y] = matrix[y][x] = 1;
         }
 
-        getVirusInfectionDfs(1);
-
-        System.out.println(count);
-
+        System.out.println(bfs(matrix, visited, 1));
     }
 
-    public static void getVirusInfectionDfs(int startNode) {
+    private static int bfs(int[][] matrix, boolean[] visited, int startNode) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(startNode);
         visited[startNode] = true;
-        for (int i = 1; i<= node; i++) {
-            if (graph[startNode][i] == 1 && !visited[i]) {
-                count++;
-                getVirusInfectionDfs(i);
+        int count = 0;
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+
+            for (int i = 1; i < matrix.length; i++) {
+                if (matrix[node][i] == 1 && !visited[i]) {
+                    queue.offer(i);
+                    visited[i] = true;
+                    count++;
+                }
             }
         }
+        return count;
     }
 
-    public static int toInt(String value) {
+    private static int toInt(String value) {
         return Integer.parseInt(value);
     }
 

@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * 이것이 취업을 위한 코딩 테스트다 with Python
  * Java
- *
+ * <p>
  * 음료수 얼려 먹기
  * 시간제한 1초, 메모리 제한 128MB
  * Input
@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  * - 이때 구멍이 뚫려있는 부분은 0, 그렇지 않은 부분은 1이다.
  * Output
  * - 한번에 만들 수 있는 아이스크림의 개수를 출력하라.
- *
+ * <p>
  * Ex
  * Input
  * - 4 5
@@ -30,7 +30,7 @@ public class MakingFrozenDrinks {
 
     private static int n;
     private static int m;
-    private static int[][] graph = new int[1000][1000];
+    private static final int[][] GRAPH = new int[1000][1000];
 
     private static boolean dfs(int x, int y) {
         // 주어진 범위를 벗어나는 경우 종료
@@ -38,13 +38,13 @@ public class MakingFrozenDrinks {
             return false;
         }
         // 현재 노드를 아직 방문하지 않았다면 방문 처리
-        if (graph[x][y] == 0) {
-            graph[x][y] = 1;
+        if (GRAPH[x][y] == 0) {
+            GRAPH[x][y] = 1;
             // 상 하 좌 우의 노드들 모두 재귀 호출
             dfs(x - 1, y); // 좌
             dfs(x + 1, y); // 우
             dfs(x, y + 1); // 상
-            dfs(x , y - 1); // 하
+            dfs(x, y - 1); // 하
             return true;
         }
         return false;
@@ -61,7 +61,7 @@ public class MakingFrozenDrinks {
         for (int i = 0; i < n; i++) {
             String mapLine = bufferedReader.readLine();
             for (int j = 0; j < m; j++) {
-                graph[i][j] = mapLine.charAt(j) - '0'; // 아스키 코드값으로 값 제거
+                GRAPH[i][j] = mapLine.charAt(j) - '0'; // 아스키 코드로 값 제거 0: 15, 1 : 16
             }
         }
 

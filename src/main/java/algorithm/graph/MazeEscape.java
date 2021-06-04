@@ -2,10 +2,10 @@ package algorithm.graph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import static algorithm.util.InputReader.init;
 import static algorithm.util.IntegerParser.toInt;
 
 /**
@@ -76,7 +76,7 @@ public class MazeEscape {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufferedReader = init();
 
         String[] input = bufferedReader.readLine().split(" ");
         n = toInt(input[0]);

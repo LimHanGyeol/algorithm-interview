@@ -2,8 +2,8 @@ package algorithm.search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
+import static algorithm.util.InputReader.init;
 import static algorithm.util.IntegerParser.toInt;
 
 /**
@@ -28,7 +28,7 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufferedReader = init();
         // 원소의 개수 n개와 찾고자 하는 값 입력
         int n = toInt(bufferedReader.readLine());
         int target = toInt(bufferedReader.readLine());

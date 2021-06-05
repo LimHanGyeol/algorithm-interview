@@ -26,8 +26,9 @@ import static algorithm.util.IntegerParser.toInt;
  */
 public class UpDownLeftRight {
 
-    private static final int[] DIRECTION_X = new int[]{0, 0, -1, 1};
-    private static final int[] DIRECTION_Y = new int[]{-1, 1, 0, 0};
+    // 좌우하상
+    private static final int[] DIRECTION_X = new int[]{0, 0, -1, 1};// {1, -1, 0, 0};//
+    private static final int[] DIRECTION_Y = new int[]{-1, 1, 0, 0};// {0, 0, -1, 1};//
     private static final char[] MOVE_TYPE = new char[]{'L', 'R', 'U', 'D'};
 
     public static void main(String[] args) throws IOException {

@@ -16,11 +16,11 @@ public class CreatePrimeNumber {
         int r = 3;
         visited = new boolean[n];
 
-        permutation(nums, 0, n, r); // start : 순열 탐색 시작 위치
+        combination(nums, 0, n, r); // start : 조합 탐색 시작 위치
         return count;
     }
 
-    private void permutation(int[] nums, int start, int n, int r) {
+    private void combination(int[] nums, int start, int n, int r) {
         if (r == 0) {
             int sum = 0;
             for (int i = 0; i < n; i++) {
@@ -35,7 +35,7 @@ public class CreatePrimeNumber {
         }
         for (int i = start; i < n; i++) {
             visited[i] = true;
-            permutation(nums, i + 1, n, r - 1);
+            combination(nums, i + 1, n, r - 1);
             visited[i] = false;
         }
     }

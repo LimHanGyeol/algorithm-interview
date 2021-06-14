@@ -16,11 +16,9 @@ public class GameMapShortest {
     private static final int[] DIRECTION_X = new int[]{-1, 1, 0, 0};
     private static final int[] DIRECTION_Y = new int[]{0, 0, -1, 1};
 
-
     public int solution(int[][] maps) {
         n = maps.length - 1;
         m = maps[n].length - 1;
-
 
         int result = playGame(0, 0, maps);
 

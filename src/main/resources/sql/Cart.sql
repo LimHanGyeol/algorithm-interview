@@ -1,11 +1,15 @@
 -- Programmers
 -- SQL - Level4
--- 우유과 요거트가 담긴 장바구니
+-- 우유와 요거트가 담긴 장바구니 (sql - leve4)
 SELECT
     DISTINCT C1.CART_ID
 FROM
     CART_PRODUCTS C1
-        JOIN CART_PRODUCTS C2
-             ON C1.CART_ID = C2.CART_ID
+JOIN
+    CART_PRODUCTS C2
+ON
+    C1.CART_ID = C2.CART_ID
 WHERE
-        C1.NAME = "Milk" AND C2.NAME = 'Yogurt';
+    C1.NAME = 'Milk'
+AND
+    C2.NAME = 'Yogurt';

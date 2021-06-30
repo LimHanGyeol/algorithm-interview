@@ -8,7 +8,8 @@ public class Dijkstra {
 
     public static void main(String[] args) {
         Map<String, List<Edge>> graph = initGraph();
-        System.out.println(findShortestPath(graph, "A"));
+        Map<String, Integer> findPath = findShortestPath(graph, "A");
+        System.out.println(findPath);
     }
 
     private static Map<String, Integer> findShortestPath(Map<String, List<Edge>> graph, String start) {

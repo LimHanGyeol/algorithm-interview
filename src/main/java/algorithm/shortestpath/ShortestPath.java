@@ -1,4 +1,4 @@
-package algorithm.shortestPath;
+package algorithm.shortestpath;
 
 import java.io.BufferedReader;
 import java.io.IOException;

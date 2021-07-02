@@ -1,4 +1,4 @@
-package algorithm.shortestPath;
+package algorithm.shortestpath;
 
 import algorithm.structure.heap.Edge;
 

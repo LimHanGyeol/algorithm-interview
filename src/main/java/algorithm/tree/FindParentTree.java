@@ -21,7 +21,7 @@ public class FindParentTree {
 
     public static void main(String[] args) throws IOException {
         input();
-        dfs(1, -1);
+        dfs(1, -1); // -1은 부모가 없다는 것을 의미한다.
         output();
     }
 

@@ -7,9 +7,9 @@ import static algorithm.util.InputReader.init;
 import static algorithm.util.IntegerParser.toInt;
 
 /**
- * Baekjoon
- * Simulation (구현)
- * 달팽이 - 1913
+ * Baekjoon. 1913
+ * 달팽이
+ * Simulation
  */
 public class Snail {
 

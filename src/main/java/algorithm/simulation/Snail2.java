@@ -7,9 +7,9 @@ import static algorithm.util.InputReader.init;
 import static algorithm.util.IntegerParser.toInt;
 
 /**
- * BaekJoon
+ * BaekJoon. 1952
+ * 달팽이2
  * Simulation (구현)
- * 달팽이2 - 1952
  */
 public class Snail2 {
 

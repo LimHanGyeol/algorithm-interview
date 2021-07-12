@@ -44,16 +44,17 @@ public class SevenDwarfs {
                 }
             }
             return;
-        } else if (target == n) { // 탐색은 다 했지만 필요한 개수만큼 뽑지 못한 경우
-            return;
-        } else {
-            // 현재 위치에 target 인덱스에 존재하는 난쟁이의 키 삽입
-            output[index] = dwarfs[target];
-            // array[target]을 뽑은 경우
-            findDwarfs(n, r - 1, index + 1, target + 1);
-
-            // array[target]을 뽑지 않은 경우
-            findDwarfs(n, r, index, target + 1);
         }
+        if (target == n) { // 탐색은 다 했지만 필요한 개수만큼 뽑지 못한 경우
+            return;
+        }
+
+        // 현재 위치에 target 인덱스에 존재하는 난쟁이의 키 삽입
+        output[index] = dwarfs[target];
+        // array[target]을 뽑은 경우
+        findDwarfs(n, r - 1, index + 1, target + 1);
+
+        // array[target]을 뽑지 않은 경우
+        findDwarfs(n, r, index, target + 1);
     }
 }

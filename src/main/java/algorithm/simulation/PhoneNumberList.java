@@ -14,7 +14,7 @@ public class PhoneNumberList {
         Map<String, Integer> phoneNumberMap = initPhoneNumberMap(phoneBook);
 
         for (String phoneNumber : phoneNumberMap.keySet()) {
-            for (int i = 1; i <= phoneNumber.length() - 1; i++) {
+            for (int i = 1; i < phoneNumber.length(); i++) {
                 String startWithKey = phoneNumber.substring(0, i);
                 if (phoneNumberMap.containsKey(startWithKey)) {
                     return false;

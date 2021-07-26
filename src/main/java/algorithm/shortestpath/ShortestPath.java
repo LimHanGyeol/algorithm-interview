@@ -9,6 +9,8 @@ import java.util.List;
 import static algorithm.util.InputReader.init;
 import static algorithm.util.IntegerParser.toInt;
 
+// 알고리즘 파악.
+// PriorityQueue<>를 이용한 풀이로 학습하자.
 public class ShortestPath {
 
     private static final int INF = (int) 1e9; // 무한을 의미하는 값으로 10억 설정

@@ -49,10 +49,4 @@ public class Main {
         }
         return result;
     }
-
-
-    private static int toInt(String value) {
-        return Integer.parseInt(value);
-    }
-
 }

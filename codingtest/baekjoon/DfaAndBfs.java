@@ -66,9 +66,4 @@ class Main {
 
         }
     }
-
-    private static int toInt(String value) {
-        return Integer.parseInt(value);
-    }
-
 }

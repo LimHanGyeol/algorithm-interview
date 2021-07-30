@@ -46,9 +46,4 @@ class Main {
         }
         return count;
     }
-
-    private static int toInt(String value) {
-        return Integer.parseInt(value);
-    }
-
 }

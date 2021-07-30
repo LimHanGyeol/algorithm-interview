@@ -2,6 +2,8 @@ package algorithm.bruteforce;
 
 import java.io.*;
 
+import static algorithm.util.IntegerParser.toInt;
+
 /**
  * BaekJoon. 15651
  * N과 M(1)
@@ -33,10 +35,6 @@ public class NandM1 {
 
         results = new int[M];
         visited = new boolean[N];
-    }
-
-    private static int toInt(String value) {
-        return Integer.parseInt(value);
     }
 
     private static void calculate(int n, int m, int depth) {

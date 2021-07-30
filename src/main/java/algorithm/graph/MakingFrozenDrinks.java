@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import static algorithm.util.IntegerParser.toInt;
+
 /**
  * 이것이 취업을 위한 코딩 테스트다 with Python
  * Java
@@ -76,9 +78,5 @@ public class MakingFrozenDrinks {
             }
         }
         System.out.println("result = " + result);
-    }
-
-    private static int toInt(String value) {
-        return Integer.parseInt(value);
     }
 }

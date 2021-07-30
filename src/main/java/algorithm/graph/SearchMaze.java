@@ -48,7 +48,7 @@ public class SearchMaze {
         System.out.println(result);
     }
 
-//    private static int searchMaze(int x, int y, int[][] map) { 인접 행렬
+    //    private static int searchMaze(int x, int y, int[][] map) { 인접 행렬
     private static int searchMaze(int x, int y) {
         Queue<Node> queue = new LinkedList<>();
         queue.offer(new Node(x, y));
